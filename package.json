@@ -1,0 +1,23 @@
+{
+  "name": "lambda-weekly-image-cleanup",
+  "version": "1.0.0",
+  "description": "Lambda function for scheduling weekly image cleanup",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "npm run test",
+    "deploy": "aws lambda update-function-code --function-name your-function-name --zip-file fileb://function.zip",
+    "package": "zip -r function.zip ."
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.0.0",
+    "@aws-sdk/lib-dynamodb": "^3.758.0",
+    "cloudinary": "^2.7.0",
+    "uuid": "^9.0.1"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "Integer Labs"
+}
